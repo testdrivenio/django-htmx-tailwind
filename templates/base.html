@@ -1,15 +1,26 @@
+{% load compress %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flask + HTMX + TailwindCSS</title>
+        <title>Django + HTMX + TailwindCSS</title>
+
+
+        {% compress css %}
+        <link rel="stylesheet" href="{% static 'src/main.css' %}">
+        {% endcompress %}
+        <!-- <link rel="stylesheet" href="{% static 'dist/main.css' %}"> -->
+
     </head>
     <body class="bg-blue-100">
         {% block content %}
         {% endblock content %}
-        <script src="https://unpkg.com/htmx.org@1.1.0"></script>
+        {% compress js %}
+        <script type="text/javascript" src="{% static 'src/main.js' %}"></script>
+        {% endcompress %}
         <script>
             document.body.addEventListener('htmx:configRequest', (event) => {
                 event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';

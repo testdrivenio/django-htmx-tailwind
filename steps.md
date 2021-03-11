@@ -22,4 +22,10 @@
 
 1. Add urls to app urls
 
-1. 
+1. Setup tailwind and postcss configuration
+
+1. Install django-compressor and add to apps
+
+1. create postcss filter class in `todos/admin.py`
+
+1. add `COMPRESS_ROOT`, `COMPRESS_ENABLED`, `COMPRESS_CSS_FILTERS` and `STATICFILES_FINDERS` to settings.py
