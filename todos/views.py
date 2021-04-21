@@ -5,7 +5,7 @@ from .todo import todos
 
 
 def index(request):
-    return render(request, 'index.html', {'todos': []})
+    return render(request, 'index.html', {'todos': todos})
 
 
 @require_http_methods(['POST'])
@@ -13,7 +13,7 @@ def search(request):
     res_todos = []
     search = request.POST['search']
     if len(search) == 0:
-        return render(request, 'todo.html', {'todos': []})
+        return render(request, 'todo.html', {'todos': todos})
     for i in todos:
         if search in i['title']:
             res_todos.append(i)
