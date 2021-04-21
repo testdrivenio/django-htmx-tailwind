@@ -24,6 +24,7 @@ Check out the [post](https://testdriven.io/blog/django-htmx-tailwind/).
 
     ```sh
     $ npm install
+    $ npm install tailwindcss
     # you may need to install PostCSS globally as well
     # npm install --global postcss postcss-cli
     ```
