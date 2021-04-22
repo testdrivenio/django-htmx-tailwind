@@ -23,8 +23,7 @@ Check out the [post](https://testdriven.io/blog/django-htmx-tailwind/).
 1. Install the Node dependencies:
 
     ```sh
-    $ npm install
-    $ npm install tailwindcss
+    $ npm install tailwindcss postcss postcss-cli autoprefixer @fullhuman/postcss-purgecss
     # you may need to install PostCSS globally as well
     # npm install --global postcss postcss-cli
     ```
