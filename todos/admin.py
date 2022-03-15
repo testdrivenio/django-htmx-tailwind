@@ -1,5 +1,3 @@
-from compressor.filters import CompilerFilter
+from django.contrib import admin
 
-
-class PostCSSFilter(CompilerFilter):
-    command = 'postcss'
+# Register your models here.
