@@ -8,31 +8,36 @@ Check out the [post](https://testdriven.io/blog/django-htmx-tailwind/).
 
 1. Fork/Clone
 
-1. Create and activate a virtual environment:
+2. Create and activate a virtual environment:
 
     ```sh
-    $ python3 -m venv venv && source venv/bin/activate
+    $ python3.10 -m venv venv && source venv/bin/activate
     ```
 
-1. Install the Python dependencies:
+3. Install the Python dependencies:
 
     ```sh
     (venv)$ pip install -r requirements.txt
     ```
 
-1. Install the Node dependencies:
+4. Install and setup Tailwind CSS:
 
     ```sh
-    $ npm install tailwindcss postcss postcss-cli autoprefixer @fullhuman/postcss-purgecss
-    # you may need to install PostCSS globally as well
-    # npm install --global postcss postcss-cli
+    $ pip install pytailwindcss
+    $ tailwindcss
     ```
 
-1. Apply the migrations and run the Django development server:
+5. Scan templates and generate CSS file:
+    
+    ```sh
+    $ tailwindcss -i ./static/src/main.css -o ./static/src/output.css --minify
+    ```
+
+6. Apply the migrations and run the Django development server:
 
     ```sh
     (venv)$ python manage.py migrate
     (venv)$ python manage.py runserver
     ```
 
-1. Test at [http://localhost:8000/](http://localhost:8000/)
+6. Test at [http://localhost:8000/](http://localhost:8000/)
