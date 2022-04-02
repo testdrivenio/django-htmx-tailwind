@@ -2,3 +2,4 @@ venv
 db.sqlite3
 node_modules
 static/CACHE
+__pycache__
